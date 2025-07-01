@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> TCS WhatsApp Groups</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+  <header>TCS WhatsApp Groups</header>
+
+  <div class="container">
+    <section>
+      <h2>General Groups</h2>
+      <div class="group-list" id="general-groups">
+        <!-- General group links will be inserted here -->
+      </div>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h2>Business Groups</h2>
+      <div class="group-list" id="business-groups">
+        <!-- Business group links will be inserted here -->
+      </div>
+    </section>
+  </div>
+
+  <footer id="footer">
+     <p>Made with ❤️ by <strong>ROHXN</strong></p>
+    <div class="social-icons">
+      <a href="https://github.com/Rohan-Rajak07" target="_blank" aria-label="GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+      </a>
+      <a href="https://www.instagram.com/rohxn_rajak/" target="_blank" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+
+
+  <script>
+    // Example WhatsApp group links
+    const generalGroups = [
+        { name: "TCS Batch-2025 _G1️⃣", link: "https://chat.whatsapp.com/HxQKORRKoS28WDe3EO46kw" },
+        { name: "TCS Batch-2025 _G2️⃣", link: "https://chat.whatsapp.com/JYsmd5thEgi4fDuCmRiohF" },
+        { name: "TCS Batch-2025 _G3️⃣", link: "https://chat.whatsapp.com/DtUXx398ADO5DhtSDBIGDh?mode=ac_t" },
+    ];
+
+    const businessGroups = [
+      { name: '📊 BFSI US East - Capital Markets and NE', link: 'https://chat.whatsapp.com/Hdt8n6Cre3p1VqFnfJUxG3' },
+      { name: '🦋BFSI FY 25 East Insurance Parent', link: 'https://chat.whatsapp.com/DoQKK70IUHvCU8bv9H5F2k' },
+      { name: '🏦 BFSI US East - Banking', link: 'https://chat.whatsapp.com/KFJUrvfnPYe350J07sBA51' },
+      { name: '🌎 BFSI US West - Parent', link: 'https://chat.whatsapp.com/C8onndZYvcE41fPhHSUTqf?mode=ac_t' },
+      { name: '🏰BFSI Europe Central - Parent', link: 'https://chat.whatsapp.com/LSUB6CKZE92FkKk9S1XBBL' },
+      { name: '🦜BFSI Europe Benelux and SE Parent', link: 'https://chat.whatsapp.com/JZk14Lx58XyJu7C8SE6JCd'},
+      { name: '💰 BFSI FY25 US SE', link: 'https://chat.whatsapp.com/IWEt85AjZKaGdXLSQquIDd' },
+      { name: '📈 BFSI A&I FY25', link: 'https://chat.whatsapp.com/BCqWunKtFKk2mjXS6sZaP8' },
+      { name: '🍁BFSI Canada - Parent', link: 'https://chat.whatsapp.com/LTlHZLa7yxdDMz6WLdKbKO' },
+      { name: '🤝 BFSI CBO - Networking', link: 'https://chat.whatsapp.com/Genh1pxPjjbB7oqsh3y9bu?mode=ac_t' },
+      { name: '🐎BFSI UK1 - ME', link: 'https://chat.whatsapp.com/I7kVBPtzcTeKqtT25Kl26a' },
+      { name: '♟️BFSI UK2 - IE RSA', link: 'https://chat.whatsapp.com/IBuPX57km6Q09D1w37cAvR' },
+      { name: '🌏 BFSI APAC - Parent', link: 'https://chat.whatsapp.com/GDKqYDG4JZPAsIsRdiSn2f' },
+      { name: '🛠️ BFSI BTAG Garage', link: 'https://chat.whatsapp.com/B71GqOayfvw2ND1GDJKd9M' },
+
+       // Additional Business Groups you provided under "Other Groups"
+
+      { name: '🖥️ TCS TechSS', link: 'https://chat.whatsapp.com/LWYvBqmkNZIK7UYGIzDmJr?mode=ac_t' },
+      { name: '🔧 ITIS Business Group', link: 'https://chat.whatsapp.com/J8MumJhnL4hJlpTQlSLYIX?mode=r_t' },
+      { name: '🚀 CBG Business Unit TCS 2025', link: 'https://chat.whatsapp.com/KQ2VNUzz8zFCSz7gqmym7T' },
+      { name: '🌐 TCS AP and TG 2025', link: 'https://chat.whatsapp.com/CMWp5ACH48Z8969jAB1Bx9?mode=r_t' },
+      { name: '🛡️ Cybersecurity Practice (CSP) Unit - HackQuest', link: 'https://chat.whatsapp.com/FYIzoccZW1v7R0MWmHd3GO?mode=r_t' },
+      { name: '🔗 IoT & Digital Engineering', link: 'https://chat.whatsapp.com/CCYa5cPiCof3QxbLN8zAM4' },
+      { name: '🔒 DIS Cybersecurity Unit TCS', link: 'https://chat.whatsapp.com/BDiNtg1f6XwGuUZDxKCwBq' }
+    ];
+
+    function renderGroups(groupArray, containerId) {
+      const container = document.getElementById(containerId);
+      groupArray.forEach(group => {
+        const link = document.createElement('a');
+        link.href = group.link;
+        link.target = '_blank';
+        link.className = 'group-item';
+        link.textContent = group.name;
+        container.appendChild(link);
+      });
+    }
+
+    renderGroups(generalGroups, 'general-groups');
+    renderGroups(businessGroups, 'business-groups');
+  </script>
+
+</body>
+</html>
